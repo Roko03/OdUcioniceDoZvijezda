@@ -6,6 +6,7 @@
     display: flex;
     width: rem(200);
     height: rem(300);
+    overflow: hidden;
 
     @include breakpoint(medium) {
         width: rem(300);
