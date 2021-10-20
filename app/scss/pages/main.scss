@@ -1,0 +1,374 @@
+@use '../util'as *;
+
+
+.hero {
+    height: 100vh;
+
+    .picture {
+        display: flex;
+        padding: rem(30) rem(30);
+
+        @include breakpoint(medium) {
+            padding: rem(20) rem(50);
+        }
+
+        @include breakpoint(large) {
+            padding: rem(60) rem(120);
+        }
+
+        flex-direction: column;
+        background: url('/img/hero-mobile.png');
+
+        @include breakpoint(medium) {
+            background: url('/img/hero-desktop.png');
+            background-position-x: right;
+            background-position-y: rem(-100);
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 100%;
+        }
+
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position-y: bottom;
+        height: 100%;
+
+        &__title {
+            margin-top: rem(80);
+            padding-right: rem(50);
+
+            @include breakpoint(large) {
+                margin-top: rem(100);
+                padding-right: rem(500);
+            }
+        }
+
+        &__conferences {
+            display: flex;
+            justify-content: space-between;
+            margin-top: auto;
+            padding-bottom: rem(20);
+
+            .left-conferences {
+                .title {
+
+                    padding-bottom: rem(10);
+
+                    @include breakpoint(medium) {
+                        padding-bottom: rem(30);
+                    }
+
+                }
+
+                .subtitle {
+                    padding-right: rem(30);
+
+                    @include breakpoint(medium) {
+                        display: flex;
+                        align-items: center;
+                        gap: rem(60);
+                        padding-right: 0;
+                    }
+
+                    .right>*+* {
+                        padding: rem(10) 0;
+
+                    }
+                }
+
+            }
+
+            .right-links {
+                margin-top: auto;
+
+                .links {
+                    display: flex;
+                    flex-direction: column;
+                    gap: rem(10);
+
+                    @include breakpoint(medium) {
+                        flex-direction: row;
+                        gap: rem(30);
+                    }
+
+
+                    li svg {
+                        width: rem(18);
+                        height: rem(18);
+
+                        @include breakpoint(medium) {
+                            width: rem(25);
+                            height: rem(25);
+                        }
+                    }
+
+                }
+            }
+        }
+
+
+    }
+
+}
+
+
+.about {
+
+    h1 {
+        margin: rem(30) 0;
+
+        @include breakpoint(large) {
+            margin: rem(50) 0;
+        }
+    }
+
+    .aboutus {
+        display: grid;
+        gap: rem(20);
+        grid-template-areas: "one"
+            "two"
+            "three"
+            "four";
+
+        @include breakpoint(medium) {
+            gap: rem(40);
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-areas: "one two three"
+                "four four four";
+        }
+
+        .one {
+            grid-area: one;
+        }
+
+        .two {
+            grid-area: two;
+        }
+
+        .three {
+            grid-area: three;
+        }
+
+        .four {
+            grid-area: four;
+            width: 100%;
+            height: rem(150);
+
+            @include breakpoint(medium) {
+                height: rem(190);
+            }
+        }
+
+
+        &__column {
+
+            .logo svg {
+                height: rem(59);
+                width: rem(196);
+
+                @include breakpoint(large) {
+                    height: rem(105.88);
+                    width: rem(400);
+                }
+            }
+
+            .main {
+                margin: 0 auto rem(200);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: rem(137);
+                width: 80%;
+                color: var(--white);
+            }
+        }
+
+
+    }
+}
+
+.mems {
+
+    padding: rem(30) 0;
+
+    @include breakpoint(large) {
+        padding: rem(30) 0;
+    }
+
+    h1 {
+        margin: rem(30) 0;
+
+        @include breakpoint(large) {
+            margin: rem(40) 0;
+        }
+    }
+
+    .cards-list {
+        position: relative;
+        margin: 0 auto;
+        display: none;
+
+        @media (min-width:rem(517)) {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            width: 100%;
+            gap: 0;
+        }
+
+        @include breakpoint(medium) {
+            width: rem(670);
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        @include breakpoint(large) {
+            width: rem(950);
+        }
+
+
+        .cards:nth-child(1) {
+            @media (min-width:rem(517)) {
+                margin-top: rem(65);
+            }
+
+            @media (min-width:rem(720)) {
+                margin-top: rem(65);
+            }
+        }
+
+        .cards:nth-child(3) {
+            @media (min-width:rem(720)) {
+                margin-top: rem(50);
+            }
+        }
+
+        .cards:nth-child(4) {
+            @media (min-width:rem(517)) {
+                margin-top: rem(-65);
+            }
+
+            @media (min-width:rem(720)) {
+                margin-top: rem(0);
+            }
+        }
+
+        .cards:nth-child(5) {
+            @media (min-width:rem(720)) {
+                margin-top: rem(-65);
+            }
+        }
+
+        .cards:nth-child(6) {
+            @media (min-width:rem(517)) {
+                margin-top: rem(-65);
+            }
+
+            @media (min-width:rem(720)) {
+                margin-top: rem(-15);
+            }
+        }
+    }
+
+
+    .slider {
+
+        @media (min-width:rem(517)) {
+            display: none;
+        }
+
+
+        .swiper-container-main {
+            overflow: hidden;
+            width: 100%;
+            height: 100%;
+
+            .swiper-slide {
+                text-align: center;
+                display: -webkit-box;
+                display: -ms-flexbox;
+                display: -webkit-flex;
+                display: flex;
+                -webkit-box-pack: center;
+                -ms-flex-pack: center;
+                -webkit-justify-content: center;
+                justify-content: center;
+                -webkit-box-align: center;
+                -ms-flex-align: center;
+                -webkit-align-items: center;
+                align-items: center;
+            }
+        }
+    }
+
+}
+
+.nws {
+    margin: rem(30) 0 rem(20);
+
+    @include breakpoint(large) {
+        margin: rem(60) 0 rem(60);
+    }
+
+    h1 {
+        margin-bottom: rem(20);
+
+        @include breakpoint(large) {
+            margin-bottom: rem(30);
+        }
+    }
+
+    .news-main {
+        text-align: center;
+
+        .news-main-list {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+            gap: rem(30);
+
+            margin-bottom: rem(60);
+
+            @media (min-width:rem(490)) {
+                justify-content: space-between;
+            }
+
+            @include breakpoint(large) {
+                margin-bottom: rem(50);
+            }
+        }
+    }
+}
+
+.partners {
+    margin: rem(30) 0 rem(20);
+
+    @include breakpoint(large) {
+        margin: rem(20) 0 rem(60);
+    }
+
+    h1 {
+        margin-bottom: rem(60);
+    }
+
+    .partners-list {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        gap: rem(40);
+
+        .partners-logo {
+            max-width: 60%;
+
+            @include breakpoint(medium) {
+                max-width: 40%;
+            }
+
+            @include breakpoint(large) {
+                max-width: 30%;
+            }
+        }
+    }
+}

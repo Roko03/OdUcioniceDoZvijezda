@@ -1,0 +1,62 @@
+@use '../util'as *;
+
+
+.box {
+
+    @include breakpoint(medium) {
+        max-width: rem(992);
+        height: rem(179);
+    }
+
+    &__icons {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        text-align: center;
+        width: calc(100% / 3);
+
+        @include breakpoint(large) {
+            flex-direction: row;
+            text-align: start;
+
+        }
+
+        .icon {
+            @include breakpoint(large) {
+                margin-right: rem(20);
+            }
+        }
+
+        .members svg {
+            width: rem(52);
+            height: rem(52);
+
+            @include breakpoint(large) {
+                width: rem(77);
+                height: rem(77);
+            }
+        }
+
+        .teams svg {
+            width: rem(44);
+            height: rem(44);
+
+            @include breakpoint(large) {
+                width: rem(67);
+                height: rem(67);
+            }
+        }
+
+        .projects svg {
+            width: rem(41);
+            height: rem(41);
+
+            @include breakpoint(large) {
+                width: rem(67);
+                height: rem(67);
+            }
+        }
+
+    }
+}

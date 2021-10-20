@@ -1,0 +1,243 @@
+@use '../util'as *;
+
+a,
+a:visited,
+a:active {
+    text-decoration: none;
+}
+
+
+h1 {
+    font-family: var(--font-header);
+    font-weight: bold;
+    font-size: rem(24);
+    line-height: 1.8;
+
+    @include breakpoint(large) {
+        font-size: rem(28);
+    }
+}
+
+h2 {
+    font-family: var(--font-header);
+    font-weight: bold;
+    font-size: rem(24);
+
+    @include breakpoint(large) {
+        font-size: rem(28);
+    }
+}
+
+
+h6 {
+    font-family: var(--font-text);
+    font-weight: 400;
+    font-size: rem(18);
+
+    @include breakpoint(large) {
+        font-size: rem(20);
+    }
+}
+
+
+.bold {
+    font-weight: 500;
+}
+
+
+p,
+.list-text {
+    font-family: var(--font-text);
+    font-size: rem(14);
+    font-weight: 400;
+    line-height: 1.7;
+
+    @include breakpoint(large) {
+        font-size: rem(16);
+    }
+}
+
+.ftr {
+    &__header {
+        font-family: var(--font-text);
+        font-size: rem(18);
+        font-weight: 400;
+        line-height: 2.4;
+        color: var(--white);
+    }
+
+    &__text {
+        font-family: var(--font-text);
+        font-size: rem(16);
+        font-weight: 300;
+        line-height: 3;
+        color: var(--white);
+    }
+}
+
+.tms {
+    &__text {
+        font-family: var(--font-text);
+        font-size: rem(16);
+        font-weight: 600;
+        line-height: 1.5;
+        text-align: center;
+
+        @include breakpoint(large) {
+            font-size: rem(24);
+        }
+    }
+}
+
+.mcard {
+    &__title {
+        font-family: var(--font-text);
+        font-size: rem(16);
+        font-weight: 400;
+        line-height: 1.5;
+        text-align: center;
+        color: var(--white);
+
+        @include breakpoint(large) {
+            font-size: rem(18);
+        }
+    }
+}
+
+
+.crd {
+    &__text {
+        font-family: var(--font-text);
+        font-size: rem(16);
+        font-weight: 400;
+        line-height: 1.5;
+        text-align: center;
+        color: var(--white);
+
+        @include breakpoint(large) {
+            font-size: rem(18);
+        }
+    }
+}
+
+.subheader {
+    &__links {
+        font-family: var(--font-text);
+        font-size: rem(16);
+        font-weight: 400;
+        line-height: 1.5;
+        color: var(--black);
+
+
+        @include breakpoint(large) {
+            font-size: rem(22);
+        }
+    }
+}
+
+.bxicon {
+    &__text {
+
+        h3 {
+            font-family: var(--font-text);
+            font-size: rem(16);
+            font-weight: 700;
+            line-height: 1.5;
+
+            @include breakpoint(large) {
+                font-size: rem(22);
+            }
+        }
+
+        p {
+            font-family: var(--font-text);
+            font-size: rem(12);
+            font-weight: 300;
+            line-height: 1.5;
+
+            @include breakpoint(large) {
+                font-size: rem(18);
+            }
+        }
+    }
+}
+
+
+.picture {
+    &__title {
+        font-family: var(--font-header);
+        font-weight: bold;
+        font-size: rem(18);
+        line-height: 1.8;
+
+        @include breakpoint(large) {
+            font-size: rem(28);
+        }
+    }
+}
+
+.herot {
+    .title {
+        font-family: var(--font-text);
+        font-size: rem(12);
+        font-weight: 500;
+        line-height: 1.5;
+
+        @include breakpoint(large) {
+            font-size: rem(16);
+        }
+    }
+
+    .right {
+        &__date {
+            font-family: var(--font-text);
+            font-size: rem(14);
+            font-weight: 300;
+            line-height: 1.5;
+
+            @include breakpoint(large) {
+                font-size: rem(18);
+            }
+        }
+
+        &__txt {
+            font-family: var(--font-text);
+            font-size: rem(10);
+            font-weight: 300;
+            line-height: 1.5;
+
+            @include breakpoint(large) {
+                font-size: rem(14);
+            }
+        }
+    }
+}
+
+
+.tab-link {
+
+    .text {
+        font-family: var(--font-header);
+        font-weight: bold;
+        font-size: rem(16);
+
+        @include breakpoint(large) {
+            font-size: rem(22);
+        }
+
+        color: var(--dark-blue);
+        cursor: pointer;
+    }
+}
+
+
+.materials-text {
+    font-family: var(--font-text);
+    font-size: rem(14);
+    font-weight: 300;
+    line-height: 1.5;
+
+    @include breakpoint(large) {
+        font-size: rem(18);
+    }
+}

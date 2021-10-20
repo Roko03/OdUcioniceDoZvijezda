@@ -1,0 +1,50 @@
+@use '../util'as *;
+
+
+.materijali {
+    margin: rem(10) 0 rem(20);
+
+    @include breakpoint(large) {
+        margin: rem(20) 0 rem(60);
+    }
+
+    h1 {
+        margin-bottom: rem(20);
+
+        @include breakpoint(large) {
+            margin-bottom: rem(30);
+        }
+    }
+
+    .materials {
+
+        &__button {
+            display: flex;
+            align-items: center;
+            height: rem(50);
+            width: rem(250);
+            background: var(--dark-blue);
+            padding: 0 rem(40) 0 rem(10);
+
+            .icon-material {
+                width: rem(40);
+                height: rem(40);
+                background: var(--white);
+                display: flex;
+                flex-direction: column;
+                margin-right: rem(15);
+
+                .icon-m {
+                    width: rem(30);
+                    height: rem(30);
+                    margin: auto;
+                }
+            }
+
+            .materials-text {
+                color: var(--white);
+            }
+
+        }
+    }
+}

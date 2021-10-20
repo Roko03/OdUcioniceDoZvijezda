@@ -1,0 +1,20 @@
+@use '../util'as *;
+
+.button {
+    display: inline-block;
+    border: none;
+    outline: none;
+    border-radius: rem(4);
+    background-color: var(--light-blue-buttons);
+    font-family: var(--font-text);
+    font-size: rem(14);
+    font-weight: 500;
+    line-height: 1.5;
+    padding: rem(5) rem(15);
+    color: var(--white);
+
+    @include breakpoint(large) {
+        font-size: rem(18);
+        padding: rem(10) rem(20);
+    }
+}

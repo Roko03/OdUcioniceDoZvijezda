@@ -1,0 +1,58 @@
+@use '../util'as *;
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--dark-blue);
+    padding: rem(40) rem(30);
+
+
+    @include breakpoint(medium) {
+        padding: rem(40) rem(50);
+    }
+
+    @include breakpoint(large) {
+        padding: rem(40) rem(120);
+    }
+
+    @include breakpoint(medium) {
+        flex-direction: row;
+    }
+
+    &__column {
+
+        @include breakpoint(medium) {
+            width: calc(100% / 4);
+        }
+
+        align-items: center;
+        padding: rem(10) 0;
+
+        .links {
+            padding-top: rem(20);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            @include breakpoint(medium) {
+                padding-top: 0;
+            }
+
+            li+li {
+                margin-left: rem(30);
+            }
+        }
+
+
+        .ftr {
+            display: flex;
+            flex-direction: column;
+
+            li {
+                display: block;
+            }
+        }
+    }
+
+
+}

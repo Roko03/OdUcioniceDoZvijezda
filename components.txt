@@ -1,0 +1,54 @@
+<!-- <div class="members-list">
+        <div class="members">
+            <div class="members__card mcard">
+                <img class="img" src="img/albert-dera-ILip77SbmOE-unsplash (1) 2.png" alt="">
+                <div class="mcard__title">Marko Marko</div>
+            </div>
+        </div>
+    </div> -->
+
+    <!-- <div class="cards-list">
+        <div class="cards">
+            <div class="cards__card crd">
+                <img class="img" src="img/albert-dera-ILip77SbmOE-unsplash (1) 2.png" alt="">
+                <div class="crd__text">Marko Marko</div>
+            </div>
+        </div>
+    </div> -->
+
+    <!-- <section class="news-list">
+        <div class="news">
+            <div class="news__text">
+                <div class="date">
+                    <span>Name</span>
+                    <span>07.10.2021</span>
+                </div>
+                <h6 class="bold">Lorem ipsum dolor sit amet consectetur.</h6>
+            </div>
+        </div>
+    </section> -->
+
+    <!-- <div class="teams-list">
+        <div class="teams">
+            <div class="teams__card tms">
+                <div class="tms__icon">a</div>
+                <div class="tms__text">Tim <br>poduzetništvo</div>
+            </div>
+            <div class="teams__card tms">
+                <div class="tms__icon">a</div>
+                <div class="tms__text">Tim <br>poduzetništvo</div>
+            </div>
+            <div class="teams__card tms">
+                <div class="tms__icon">a</div>
+                <div class="tms__text">Tim <br>poduzetništvo</div>
+            </div>
+            <div class="teams__card tms">
+                <div class="tms__icon">a</div>
+                <div class="tms__text">Tim <br>poduzetništvo</div>
+            </div>
+            <div class="teams__card tms">
+                <div class="tms__icon">a</div>
+                <div class="tms__text">Tim <br>poduzetništvo</div>
+            </div>
+        </div>
+    </div> -->

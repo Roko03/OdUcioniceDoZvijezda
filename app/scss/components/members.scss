@@ -1,0 +1,44 @@
+@use '../util/'as *;
+
+.members {
+    &__card {
+        position: relative;
+        width: rem(246);
+        height: rem(283);
+        overflow: hidden;
+
+        .img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: rem(363);
+            width: 100%;
+            z-index: 1;
+        }
+
+        .mcard__title {
+            position: absolute;
+            left: 8%;
+            bottom: 8%;
+            z-index: 3;
+        }
+    }
+
+    &__card::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        background: var(--black);
+        opacity: .3;
+        z-index: 2;
+        transition: opacity .3s ease-in-out;
+    }
+
+
+    &__card:hover::before {
+        opacity: .6;
+    }
+
+}

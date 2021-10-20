@@ -1,0 +1,26 @@
+@font-face {
+    font-family: 'verdana';
+    src: url('./font/verdana_bold-webfont.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'verdana';
+    src: url('./font/verdana0-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'verdana';
+    src: url('./font/verdana-webfont.woff') format('woff');
+    font-weight: lighter;
+    font-style: normal;
+}
+
+:root {
+    --font-text: 'Roboto',
+        sans-serif;
+    --font-header: 'verdana';
+}

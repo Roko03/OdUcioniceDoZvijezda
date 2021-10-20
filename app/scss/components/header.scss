@@ -1,0 +1,162 @@
+@use '../util'as *;
+
+
+.header {
+    padding: 0 rem(30);
+
+
+    @include breakpoint(medium) {
+        padding: 0 rem(50);
+    }
+
+    @include breakpoint(large) {
+        padding: 0 rem(120);
+    }
+
+    position: fixed;
+    inset: 0;
+    z-index: 999;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: rem(72);
+    background-color: var(--dark-blue);
+
+    &__hamburger {
+        position: relative;
+        height: rem(18);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all .4s ease-in-out;
+        z-index: 9999;
+
+        span {
+            width: rem(24);
+            height: rem(2);
+            border-radius: rem(4);
+            transition: all .4s ease-in-out;
+            background-color: var(--white);
+        }
+
+        span::before,
+        span::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            width: rem(24);
+            height: rem(2);
+            border-radius: rem(4);
+            transition: all .4s ease-in-out;
+            background-color: var(--white);
+        }
+
+        span::before {
+            top: 0;
+        }
+
+        span::after {
+            bottom: 0;
+        }
+    }
+
+    //Animation 
+
+    &__hamburger.active {
+
+        span {
+            background: transparent;
+        }
+
+        span::before {
+            top: 50%;
+            transform: rotate(45deg);
+        }
+
+        span::after {
+            top: 50%;
+            transform: rotate(-45deg);
+        }
+    }
+
+    @include breakpoint(medium) {
+        &__hamburger {
+            display: none;
+        }
+    }
+
+    &__nav {
+        display: none;
+    }
+
+    @include breakpoint(medium) {
+        &__nav {
+            display: block;
+
+            .links {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                li+li {
+                    margin-left: rem(30);
+                }
+
+                a {
+                    color: var(--white);
+                    font-family: var(--font-text);
+                    font-weight: 400;
+                    font-size: rem(16);
+
+                }
+            }
+        }
+    }
+
+
+    .side-menu {
+
+        display: none;
+        transition: all .5s ease-in;
+
+        .side-links {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: auto;
+            gap: rem(15);
+
+            li a {
+                display: block;
+                font-family: var(--font-header);
+                font-weight: normal;
+                font-size: rem(24);
+                line-height: 1.8;
+
+                @include breakpoint(large) {
+                    font-size: rem(28);
+                }
+
+                color: var(--white);
+                display: block;
+                cursor: pointer;
+            }
+        }
+
+
+    }
+
+    .side-menu.active {
+        display: flex;
+        flex-direction: column;
+        position: fixed;
+        height: 100%;
+        width: 100%;
+        z-index: 1500;
+        left: 0;
+        top: 0;
+        background: var(--dark-blue);
+    }
+
+}

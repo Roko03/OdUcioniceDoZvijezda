@@ -1,0 +1,50 @@
+@use '../util'as *;
+
+.pics {
+
+    margin: rem(10) 0 rem(20);
+
+    @include breakpoint(large) {
+        margin: rem(20) 0 rem(60);
+    }
+
+    h1 {
+        margin-bottom: rem(20);
+
+        @include breakpoint(large) {
+            margin-bottom: rem(30);
+        }
+    }
+
+    .gallery {
+
+        width: 100%;
+        display: grid;
+        justify-content: center;
+        grid-column-gap: rem(10);
+
+        @include breakpoint(medium) {
+            justify-content: space-between;
+            grid-column-gap: rem(5);
+
+        }
+
+        grid-row-gap: rem(10);
+        grid-template-columns: repeat(auto-fit, minmax(rem(195), rem(250)));
+
+        &__card {
+            position: relative;
+            width: rem(250);
+            height: rem(300);
+            overflow: hidden;
+
+            img {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: rem(400);
+            }
+        }
+    }
+}

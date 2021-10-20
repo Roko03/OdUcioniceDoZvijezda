@@ -1,0 +1,56 @@
+@use '../util/'as *;
+
+.teams {
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: rem(40);
+
+    &>* {
+        flex: 1 1 60%;
+    }
+
+    @include breakpoint(medium) {}
+
+    &__card {
+
+        max-width: rem(150);
+        min-height: rem(200);
+
+        @include breakpoint(medium) {
+            min-width: rem(250);
+            min-height: rem(300);
+        }
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        border-radius: rem(10);
+        border: 2px solid var(--dark-blue);
+        transition: all .4s ease-in-out;
+        color: var(--dark-blue);
+
+        .tms__icon svg {
+            fill: var(--dark-blue);
+        }
+
+    }
+
+    &__card:hover {
+        background-color: var(--dark-blue);
+        color: var(--white);
+
+        .tms__icon svg {
+            fill: var(--white);
+        }
+    }
+
+
+
+
+
+
+
+}

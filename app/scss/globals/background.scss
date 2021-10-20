@@ -1,0 +1,28 @@
+@use '../util/'as *;
+
+.bg {
+    &__dark {
+        @include set-background(#0B093A);
+    }
+
+    &__light {
+        @include set-background(#F8F8F8);
+    }
+}
+
+.container {
+    max-width: rem(1640);
+    padding: 0 rem(30);
+
+    @include breakpoint(medium) {
+        padding: 0 rem(50);
+    }
+
+    @include breakpoint(large) {
+        padding: 0 rem(120);
+    }
+
+    @media (min-width:rem(1640)) {
+        margin: 0 auto;
+    }
+}

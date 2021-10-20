@@ -1,0 +1,85 @@
+@use '../util'as *;
+
+.contacts {
+
+    display: grid;
+    grid-template-areas: "left-side"
+        "right-side";
+
+    @include breakpoint(medium) {
+        grid-template-areas: "left-side right-side";
+        align-items: center;
+        margin-bottom: rem(100);
+    }
+
+
+    &__left {
+        grid-area: left-side;
+
+        h1 {
+            margin-bottom: rem(50);
+        }
+
+        .inputs {
+            display: block;
+            width: 100%;
+
+            @include breakpoint(medium) {
+                width: 70%;
+            }
+
+            outline: none;
+            border: none;
+            border-bottom: 1px solid var(--black);
+            background-color: transparent;
+            padding: rem(5);
+            padding-left: 0;
+            font-family: var(--font-text);
+            color: var(--black);
+            font-weight: 500;
+            font-size: rem(16);
+
+            @include breakpoint(large) {
+                font-size: rem(18);
+            }
+
+            textarea {
+                display: block;
+                width: 100%;
+                resize: none;
+                height: 100%;
+                outline: none;
+                border: none;
+                padding: 0;
+                background-color: transparent;
+                font-family: var(--font-text);
+                font-size: rem(16);
+                color: var(--black);
+                font-weight: 500;
+
+
+                @include breakpoint(large) {
+                    font-size: rem(18);
+                }
+            }
+
+            textarea::-webkit-scrollbar {
+                width: 0px;
+            }
+        }
+
+        .inputs+.inputs {
+            margin-top: rem(30);
+        }
+
+
+        .button {
+            margin-top: rem(40);
+            padding: rem(10) rem(40);
+        }
+    }
+
+    &__right {
+        grid-area: right-side;
+    }
+}
